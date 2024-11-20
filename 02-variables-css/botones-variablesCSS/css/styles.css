@@ -1,0 +1,58 @@
+:root{
+    --bg-button-color: royalblue;
+    --button-text-color: #fff;
+}
+
+body{
+    background-color: #333;
+}
+
+.button{
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    border: none;
+    background-color: var(--bg-button-color);
+    color: var(--button-text-color);
+}
+
+.button--red {
+    --bg-button-color: firebrick;
+}
+
+.button--blue{
+    /* background-color: royalblue; */
+    --bg-button-color: royalblue;
+}
+
+.button--orange{
+    /* background-color: orange; */
+    --bg-button-color: orange;
+}
+
+/* .button--ghost-red,
+.button--ghost-blue,
+.button--ghost-orange{
+    --bg-button-color: transparent;
+    border: 1px solid currentColor;
+} */
+
+[class*="button--ghost"]{
+    background-color: transparent;
+    color: var(--button-text-color);
+    border: 1px solid currentColor;
+}
+
+.button--ghost-red{
+    /* color: firebrick */
+    --button-text-color: firebrick;
+}
+
+.button--ghost-blue{
+    /* color: royalblue; */
+    --button-text-color: royalblue;
+}
+
+.button--ghost-orange{
+    /* color: orange; */
+    --button-text-color: orange;
+}

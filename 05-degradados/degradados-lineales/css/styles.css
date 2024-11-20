@@ -1,0 +1,10 @@
+body{
+    background-color: #333;
+    margin: 0;
+}
+
+.box{
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient(orange 200px, purple 200px 400px, limegreen 400px 600px);
+}

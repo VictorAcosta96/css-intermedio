@@ -1,0 +1,49 @@
+body {
+    background-color: #333;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'a'
+        'b'
+        'c'
+    ;
+    gap: 1rem;
+    border: 2px solid royalblue;
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(4, 100px);
+        grid-template-areas:
+            'a a b'
+            'a a b'
+            'c c c'
+        ;
+        gap: 1rem;
+    }
+}
+
+.item:first-child {
+    grid-area: a;
+}
+
+.item:nth-child(2) {
+    grid-area: b;
+}
+
+.item:nth-child(4) {
+    grid-area: c;
+}
+
+.item:nth-child(even) {
+    background-color: lightcoral;
+}
+
+.item:nth-child(odd) {
+    background-color: lightseagreen;
+}

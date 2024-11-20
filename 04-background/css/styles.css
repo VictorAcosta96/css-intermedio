@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    margin: 0;
+    font-family: sans-serif;
+    height: 200vh;
+}
+
+/* .box{
+    width: 100px;
+    height: 100px;
+    padding: 80px;
+    background-color: red;
+    border: 20px dotted blueviolet;
+    outline: 15px solid lightgreen;
+
+} */
+
+/* background-image */
+/* 
+Nota: cuando usar la etiqueta image y cuando usar background-image: 
+usaremos la etiqueta image cuando la imagen sea relevante para el contenido de la pagina,
+y si la imagen es mas de adorno usaremos background-image
+*/
+/* .box{
+    width: 400px;
+    height: 500px;
+    background-color: lightsalmon;
+    background-image: url(../assets/images/dorian.png);
+} */
+
+
+/* background-position */
+/* .box{
+    width: 400px;
+    height: 500px;
+    background-color: lightsalmon;
+    background-image: url(../assets/images/dorian.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+} */
+
+/* background-position */
+/* .box{
+    width: 500px;
+    height: 500px;
+    background-color: lightsalmon;
+    background-image: url(../assets/images/dorian.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* background-attachment */
+.box{
+    width: 500px;
+    height: 500px;
+    background-color: lightsalmon;
+    background-image: url(../assets/images/dorian.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    overflow: auto;
+    background-attachment: local;
+}

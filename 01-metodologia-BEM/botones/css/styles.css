@@ -1,0 +1,82 @@
+body{
+    background-color: #333;
+}
+
+/*Asi se daria estilos sin una metodologia css*/
+/* .button-red{
+    background-color: firebrick;
+    padding: 0.4em 1em;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.button-blue{
+    background-color: royalblue;
+    padding: 0.4em 1em;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.button-ghost-red{
+    background-color: transparent;
+    padding: 0.4em 1em;
+    color: firebrick;
+    border-radius: 10px;
+    border: 1px solid firebrick;
+}
+
+.button-ghost-blue{
+    background-color: transparent;
+    padding: 0.4em 1em;
+    color: royalblue;
+    border-radius: 10px;
+    border: 1px solid royalblue;
+} */
+
+/* asi es como lo hariamos con la metodologia BEM */
+
+.button{
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    border: none;
+}
+
+.button--red,
+.button--blue,
+.button--orange{
+    color: #fff;
+
+}
+
+.button--red {
+    background-color: firebrick;
+}
+
+.button--blue{
+    background-color: royalblue;
+}
+
+.button--orange{
+    background-color: orange;
+}
+
+.button--ghost-red,
+.button--ghost-blue,
+.button--ghost-orange{
+    background-color: transparent;
+    border: 1px solid currentColor;
+}
+
+.button--ghost-red{
+    color: firebrick;
+}
+
+.button--ghost-blue{
+    color: royalblue;
+}
+
+.button--ghost-orange{
+    color: orange;
+}

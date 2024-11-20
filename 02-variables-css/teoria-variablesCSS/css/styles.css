@@ -1,0 +1,20 @@
+:root {
+    --text-color: pink;
+}
+
+
+body{
+    background-color: #333;
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+/* 
+En el body no es recomendable declarar las variables globales que vallamos a usar.
+por temas de buenas practicas y especificidad las variables se declaran en la raiz del documento osea en la pseudoclase root
+*/
+
+button,
+a {
+    color: var(--text-color);
+}

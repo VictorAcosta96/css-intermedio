@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: sans-serif;
+  color: aliceblue;
+}
+
+/* 
+.form__input{
+    background-color: transparent;
+    border: none;
+    border-bottom:  1px solid aliceblue;
+    caret-color: aqua; 
+    color: aliceblue;
+}
+*/
+
+/* caret-color: aqua; cambiar el color del cursor en el input */
+
+/* quitar el ounline de un input cuado hacemos foco en el mediante la pseudoclase focus*/
+/*
+.form__input:focus{
+    outline: none;
+} */
+
+/* validar formularios pseudoclases */
+/* .form__input:valid{
+    background-color: green;
+} */
+
+/* cambiar el color de un checkbox */
+/* .form__input{
+    accent-color: purple;
+} */
+
+/* cambiar el color del label */
+/* .form__input:checked + .form__label {
+    color: aqua;
+} */
+
+/* check personalizado ->vamoa a hacer algo parecido a un interructor */
+
+.form__input {
+  display: none;
+}
+
+.form__label {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 10px;
+  /* transition: background-color 0.3s; */
+}
+
+.form__label::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+
+/* .form__input:checked + .form__label {
+  background-color: blueviolet;
+} */
+
+.form__input:checked + .form__label::after {
+  transform: translateX(30px);
+}

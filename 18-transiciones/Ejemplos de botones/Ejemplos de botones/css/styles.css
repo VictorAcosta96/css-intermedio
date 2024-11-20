@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 1rem;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 0.8rem 0.5rem;
+  background-color: #666;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button--grow,
+.button--shrink,
+.button--float,
+.button--rotate {
+  transition: transform 0.3s;
+}
+
+/* Transiciones con transform */
+.button--grow:hover {
+  transform: scale(1.1);
+}
+.button--shrink:hover {
+  transform: scale(0.9);
+}
+.button--float:hover {
+  transform: translateY(-0.5rem);
+}
+.button--rotate:hover {
+  transform: rotate(45deg);
+}
+
+/* Transiciones de background */
+.button--fade {
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.button--fade:hover {
+  color: #333;
+  background-color: #2098d1;
+}
+
+.button--sweep {
+  transform: translateZ(0);
+}
+
+.button--sweep::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #2098d1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.button--sweep:hover::after {
+  transform: scaleX(1);
+}
+
+.button--ribbon {
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.button--ribbon::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #2098d1;
+  transform: scale(0) rotate(45deg);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.button--ribbon:hover::after {
+  transform: scale(2.5) rotate(45deg);
+}
+
+.button--shutter {
+  transform: translateZ(0);
+}
+
+.button--shutter::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #2098d1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.button--shutter:hover::after {
+  transform: scaleX(1);
+}
+
+/* Transiciones de border */
+
+.button--overline {
+  overflow: hidden;
+}
+
+.button--overline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2098d1;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.button--overline:hover::after {
+  transform: translateY(0);
+}
+
+.button--underline {
+  overflow: hidden;
+}
+
+.button--underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2098d1;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.button--underline:hover::after {
+  transform: translateY(0);
+}
+
+.button--from-center::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2098d1;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.button--from-center:hover::after {
+  transform: scaleX(1);
+}
+
+.button--ghost {
+  transition: background-color 0.3s;
+}
+
+.button--ghost:hover {
+  background-color: transparent;
+}
+
+.button--ghost::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #2098d1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button--ghost:hover::after {
+  opacity: 1;
+}

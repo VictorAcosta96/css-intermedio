@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    background-color: #333;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.container{
+    width: 500px;
+}
+
+.image{
+    max-width: 100%;
+    /* filter: blur(13px); */
+    filter: brightness(0.5);
+}
+
+.image:hover{
+    /* filter: blur(0); */
+    filter: brightness(1);
+}

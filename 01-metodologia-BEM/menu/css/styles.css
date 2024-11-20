@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    background-color: #333;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 5em;
+}
+
+.menu__item{
+    display: inline;
+    background-color: blue;
+}
+
+.menu__link{
+    color: aliceblue;
+    text-decoration: none;
+
+    margin-right: 1.5em;
+    background-color: royalblue;
+    padding: 0.5em 1em;
+}
+
+.menu--vertical .menu__item{
+    display: block;
+    margin-bottom: 2em;
+    background-color: transparent;
+}
+
+.menu--vertical .menu__link{
+    background-color: transparent;
+}

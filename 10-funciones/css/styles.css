@@ -1,0 +1,14 @@
+body {
+    background-color: #333;
+    font-family: sans-serif;
+    color: aliceblue;
+    margin: 0;
+}
+
+.header{
+    width: calc(100% - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    background-color: lightcoral;
+}

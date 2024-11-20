@@ -1,0 +1,85 @@
+body {
+    background-color: #333;
+    font-family: sans-serif;
+    /* color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.reference {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /* justify-self: center;
+    align-self: center; */
+    outline: 1px dashed #fff;
+    outline-offset: -1px;
+    /* perspective: 1000px; */
+    /* perspective como propiedad */
+}
+
+.reference::before {
+    content: 'Y';
+    position: absolute;
+    top: 70px;
+    left: -15px;
+}
+
+.reference::after {
+    content: 'X';
+    position: absolute;
+    left: 70px;
+    bottom: -20px;
+}
+
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    opacity: 0.7;
+    transform: rotateY(75deg);
+    transform: perspective(1000px) rotate(45deg);
+}
+
+
+/* .box {
+    width: 50px;
+    height: 20px;
+    background-color: lightgreen;
+    cursor: pointer;
+    user-select: none;
+}
+
+.box:active {
+    transform: scale(0.9);
+} */
+
+/* .box {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    opacity: 0.7;
+    transform: rotateY(75deg);
+    perspective como funcion de transform
+    transform: perspective(1000px) rotate(45deg);
+} */
+
+/* .box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    opacity: 0.7;
+    transform: translateY(50%); 
+    transform: translate(-50%, -25%);
+    transform: translate(ejeX, ejeY);
+    transform: translateX(50px);
+
+     centrado con transform
+    transform: translate(-50%, -50%);
+} */
